@@ -1,8 +1,8 @@
-import pymysql
+import mysql.connector
 
 class DAOUsuario:
     def connect(self):
-        return pymysql.connect(host="db", user="root", password="utec2023", db="db_poo" )
+        return mysql.connector.connect(host="db", user="root", password="utec2023", db="db_poo" )
 
     def read(self, id):
         con = DAOUsuario.connect(self)
